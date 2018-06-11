@@ -34,7 +34,7 @@ gulp.task('server', function() {
     browserSync.init({
         host: 'localhost',
         open: 'external',
-        proxy: 'http://localhost/Github/IAI_test_2/index.html',
+        proxy: 'http://localhost/MODEST/index.html',
         port: '8086'
     });
 
