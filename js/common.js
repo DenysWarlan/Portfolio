@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function() {
     $('.slick-dots').wrap('<div class="container" style="display: flex; justify-content: flex-end;"></div>');
 
 };
@@ -41,9 +41,6 @@ $(document).ready(function () {
                     dots:false
                 }
             }]
-        // customPaging: function(slider, i) {
-        //     return '<img id="dots" src="./img/dots.png">';
-        // }
     });
 })
 ;

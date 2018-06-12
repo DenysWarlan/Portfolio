@@ -1,36 +1,30 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-size: 14px;
+  height: 1000vh;
 }
 .navigation {
-  height: 75px;
   z-index: 100;
   position: relative;
 }
-.navigation .container {
-  height: 75px;
-}
-.navigation .container nav {
-  height: 75px;
-}
-.navigation .container nav .collapse .navbar-nav {
+.navigation nav .collapse .navbar-nav {
   padding: 5px;
 }
-.navigation .container nav .collapse .navbar-nav .nav-item {
+.navigation nav .collapse .navbar-nav .nav-item {
   margin: 0 5px;
 }
-.navigation .container nav .collapse .navbar-nav .nav-item .nav-link {
+.navigation nav .collapse .navbar-nav .nav-item .nav-link {
   color: #808889;
   text-transform: uppercase;
   font-size: 14px;
   padding: 5px 10px;
   font-weight: 600;
 }
-.navigation .container nav .collapse .navbar-nav .active {
+.navigation nav .collapse .navbar-nav .active {
   border: 2px solid #23b7a4;
   border-radius: 5px;
 }
-.navigation .container nav .collapse .navbar-nav .active .nav-link {
+.navigation nav .collapse .navbar-nav .active .nav-link {
   color: #23b7a4;
 }
 .banner {
@@ -38,6 +32,7 @@ body {
   background-color: #3a454d;
   width: 100vw;
   position: relative;
+  top: 55px;
 }
 .banner img {
   z-index: -100;
@@ -66,6 +61,7 @@ body {
   font-size: 36px;
   margin-bottom: 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 .banner .container .overlay .info-banner p {
   color: #808889;
@@ -79,6 +75,8 @@ body {
   font-weight: bold;
   font-size: 14px;
   color: white;
+}
+.banner .container .overlay .info-banner .button .btn:nth-child(2) {
   margin-left: 5px;
 }
 .banner .container .overlay .info-banner .button .btn:hover {
@@ -89,23 +87,215 @@ body {
   background-color: #23b7a4 !important;
   border-color: #23b7a4 !important;
 }
-@media screen and (max-width: 990px) {
+.team {
+  margin: 100px 0 50px 0;
+}
+.team .container .title h2 {
+  font-weight: bold;
+  margin: 60px 0;
+  text-transform: uppercase;
+  padding: 0 10px;
+  border-left: 5px solid #e1e6ea;
+}
+.team .container .row .our-team {
+  padding: 0 20px;
+}
+.team .container .row .our-team .card {
+  background-color: #e1e6ea;
+  border: none;
+  border-radius: 0;
+}
+.team .container .row .our-team .card img {
+  max-width: 100%;
+}
+.team .container .row .our-team .card .card-img-overlay {
+  display: none;
+  bottom: 90px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.team .container .row .our-team .card .card-body {
+  padding: 15px 10px;
+}
+.team .container .row .our-team .card .card-body h5 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 35px;
+}
+.team .container .row .our-team .card .card-body p {
+  color: #808889;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 0;
+}
+.team .container .row .our-team .card:hover {
+  background-color: #3a454d;
+}
+.team .container .row .our-team .card:hover .card-img-overlay {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.team .container .row .our-team .card:hover .card-img-overlay a {
+  color: white;
+}
+.team .container .row .our-team .card:hover .card-img-overlay a i {
+  font-size: 20px;
+  background-color: #3a454d;
+  padding: 15px;
+  margin: 0 1px;
+}
+.team .container .row .our-team .card:hover h5 {
+  color: white;
+}
+.team .container .row .our-team .card:hover p {
+  color: white;
+}
+.work {
+  background-color: #3a454d;
+}
+.work .container .title {
+  padding: 60px 0 50px 0;
+}
+.work .container .title h2 {
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  color: white;
+  border-left: 5px solid #e1e6ea;
+}
+.work .container .row .our-work .card {
+  border: none;
+  border-radius: 0;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.work .container .row .our-work .card:hover .card-img-overlay {
+  display: -ms-flexbox;
+  display: flex;
+}
+.work .container .row .our-work .card .card-img-overlay {
+  display: none;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.work .container .row .our-work .card .card-img-overlay .card-title {
+  background-color: #292f36;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 42px;
+}
+.work .container .button-show-me {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 60px 0;
+  cursor: pointer;
+}
+.work .container .button-show-me .btn:hover {
+  background-color: transparent;
+  color: white;
+}
+.services .container .title {
+  padding: 60px 0 50px 0;
+}
+.services .container .title h2 {
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  border-left: 5px solid #e1e6ea;
+}
+.services .container .row .we-do .card {
+  text-align: center;
+  border-radius: 0;
+  border: none;
+}
+.services .container .row .we-do .card .card-body {
+  margin-top: 15px;
+}
+.services .container .row .we-do .card .card-body .card-title {
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+}
+.services .container .row .we-do .card .card-body p {
+  font-size: 13px;
+  line-height: 23px;
+  color: #808889;
+  margin: 0;
+}
+.services .container .row .we-do-2 {
+  margin-top: 50px;
+}
+@media screen and (max-width: 992px) {
   nav .collapse .navbar-nav {
     position: relative;
     top: 25px;
   }
+  .team .container .row {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .team .container .row .our-team {
+    margin-top: 10px;
+  }
+  .work .container .row {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 @media screen and (max-width: 768px) {
+  .banner img {
+    position: relative;
+    object-fit: none;
+    object-position: 60% 100%;
+    height: 50vh;
+  }
   .banner .info-banner h1 {
     font-size: 1em !important;
     margin-bottom: 10px !important;
   }
-  .banner .info-banner p {
-    display: none;
+  .team .container .row {
+    -ms-flex-pack: center;
+        justify-content: center;
   }
-  .banner .info-banner .button {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px !important;
+  .work .container .row {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .services .container .row {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner img {
+    object-position: 40% 100%;
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .team .container .our-team {
+    padding: 0!important;
   }
 }
