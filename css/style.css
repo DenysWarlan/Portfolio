@@ -1,0 +1,111 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+.navigation {
+  height: 75px;
+  z-index: 100;
+  position: relative;
+}
+.navigation .container {
+  height: 75px;
+}
+.navigation .container nav {
+  height: 75px;
+}
+.navigation .container nav .collapse .navbar-nav {
+  padding: 5px;
+}
+.navigation .container nav .collapse .navbar-nav .nav-item {
+  margin: 0 5px;
+}
+.navigation .container nav .collapse .navbar-nav .nav-item .nav-link {
+  color: #808889;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+.navigation .container nav .collapse .navbar-nav .active {
+  border: 2px solid #23b7a4;
+  border-radius: 5px;
+}
+.navigation .container nav .collapse .navbar-nav .active .nav-link {
+  color: #23b7a4;
+}
+.banner {
+  z-index: 10;
+  background-color: #3a454d;
+  width: 100vw;
+  position: relative;
+}
+.banner img {
+  z-index: -100;
+}
+.banner .container .overlay {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  height: inherit;
+  bottom: 0;
+}
+.banner .container .overlay .info-banner {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.banner .container .overlay .info-banner h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.banner .container .overlay .info-banner p {
+  color: #808889;
+  font-size: 16px;
+  width: 65%;
+}
+.banner .container .overlay .info-banner .button {
+  margin-top: 30px;
+}
+.banner .container .overlay .info-banner .button .btn {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  margin-left: 5px;
+}
+.banner .container .overlay .info-banner .button .btn:hover {
+  background-color: #23b7a4;
+  border-color: #23b7a4;
+}
+.banner .container .overlay .info-banner .button .hover {
+  background-color: #23b7a4 !important;
+  border-color: #23b7a4 !important;
+}
+@media screen and (max-width: 990px) {
+  nav .collapse .navbar-nav {
+    position: relative;
+    top: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner .info-banner h1 {
+    font-size: 1em !important;
+    margin-bottom: 10px !important;
+  }
+  .banner .info-banner p {
+    display: none;
+  }
+  .banner .info-banner .button {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px !important;
+  }
+}

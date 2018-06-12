@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -21,18 +21,75 @@
 </head>
 
 <body>
+<section class="navigation bg-dark">
+    <div class="container ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="./img/modest.png" alt="MODEST"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+                <ul class="navbar-nav bg-dark text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>
 
+<section class="banner">
+   <div class="banner-slider">
+       <img src="./img/banner.png" class="img-fluid" alt="">
+       <img src="./img/banner.png" class="img-fluid" alt="">
+       <img src="./img/banner.png" class="img-fluid" alt="">
+   </div>
+    <div class="container">
+        <div class="overlay ">
+            <div class="info-banner ">
+                <h1 id="banner-title">welcome to our marketplace</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor
+                    non, ornare sagittis dolor. Nulla vestibulu lacus ...</p>
+                <div class="button ">
+                    <button id="btn-more" type="button" class="btn btn-outline-light ">View more</button>
+                    <button type="button" class="btn btn-outline-light ">Video tour</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <script
         src="https://code.jquery.com/jquery-2.0.3.js"
         integrity="sha256-lCf+LfUffUxr81+W0ZFpcU0LQyuZ3Bj0F2DQNCxTgSI="
         crossorigin="anonymous"></script>
-<script src="js/ajax.js"></script>
+<!--<script src="js/ajax.js"></script>-->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>

@@ -54,8 +54,8 @@ gulp.task('gcmq', function () {
 
 
 gulp.task('watch', function() {
-    gulp.watch('./css/less/***.less', ['css']);
-    gulp.watch(['./**/*.html', './portfolio/js/common.js', './portfolio/php/send.php'], browserSync.reload);
+    gulp.watch('./css/less/style.less', ['css']);
+    gulp.watch(['./index.html', './js/common.js'], browserSync.reload);
 });
 
 gulp.task('default', ['css', 'server', 'watch']);

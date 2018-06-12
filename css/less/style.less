@@ -1,0 +1,130 @@
+@text-color-primary: #808889;
+@text-color-secondary: white;
+@text-color-active: #23b7a4;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+
+}
+
+.navigation {
+  height: 75px;
+  z-index: 100;
+  position: relative;
+  .container {
+    height: 75px;
+    nav {
+      height: 75px;
+      .collapse {
+        .navbar-nav {
+          padding: 5px;
+          .nav-item {
+            margin: 0 5px;
+            .nav-link {
+              color: @text-color-primary;
+              text-transform: uppercase;
+              font-size: 14px;
+              padding: 5px 10px;
+              font-weight: 600;
+            }
+          }
+          .active {
+            border: 2px solid #23b7a4;
+            border-radius: 5px;
+            .nav-link {
+              color: @text-color-active;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  z-index: 10;
+  background-color: #3a454d;
+  width: 100vw;
+  position: relative;
+  img {
+    z-index: -100;
+  }
+  .container {
+    .overlay {
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      height: inherit;
+      bottom: 0;
+      .info-banner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h1 {
+          color: @text-color-secondary;
+          text-transform: uppercase;
+          font-size: 36px;
+          margin-bottom: 20px;
+          font-weight: bold;
+        }
+        p {
+          color: @text-color-primary;
+          font-size: 16px;
+          width: 65%
+        }
+        .button {
+          margin-top: 30px;
+          .btn {
+            font-weight: bold;
+            font-size: 14px;
+            color: @text-color-secondary;
+            margin-left: 5px;
+            &:hover {
+              background-color: #23b7a4;
+              border-color: #23b7a4;
+            }
+          }
+          .hover {
+            background-color: #23b7a4 !important;
+            border-color: #23b7a4 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  nav {
+    .collapse {
+      .navbar-nav {
+        position: relative;
+        top: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .banner {
+    .info-banner {
+      h1 {
+        font-size: 1em !important;
+        margin-bottom: 10px !important;
+      }
+      p {
+        display: none;
+      }
+      .button {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
+}
