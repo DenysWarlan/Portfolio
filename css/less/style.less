@@ -4,44 +4,45 @@
 @color-grey: #e1e6ea;
 @color-primary: #23b7a4;
 @back-color-primary: #3a454d;
-@back-color-work:#292f36;
+@back-color-work: #292f36;
+@back-color-form: #eaeef1;
+@color-form: #9fa1a3;
 @font-open-sans: 'Open Sans';
 @font-quatrro-sans: 'Quattrocento Sans';
 
 body {
   font-family: @font-open-sans;
   font-size: 14px;
-  height: 1000vh;
 
 }
 
 .navigation {
   z-index: 100;
   position: relative;
-    nav {
-      .collapse {
-        .navbar-nav {
-          padding: 5px;
-          .nav-item {
-            margin: 0 5px;
-            .nav-link {
-              color: @text-color-primary;
-              text-transform: uppercase;
-              font-size: 14px;
-              padding: 5px 10px;
-              font-weight: 600;
-            }
+  nav {
+    .collapse {
+      .navbar-nav {
+        padding: 5px;
+        .nav-item {
+          margin: 0 5px;
+          .nav-link {
+            color: @text-color-primary;
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 5px 10px;
+            font-weight: 600;
           }
-          .active {
-            border: 2px solid #23b7a4;
-            border-radius: 5px;
-            .nav-link {
-              color: @text-color-active;
-            }
+        }
+        .active {
+          border: 2px solid #23b7a4;
+          border-radius: 5px;
+          .nav-link {
+            color: @text-color-active;
           }
         }
       }
     }
+  }
 }
 
 .banner {
@@ -72,7 +73,7 @@ body {
           font-size: 36px;
           margin-bottom: 20px;
           font-weight: bold;
-          cursor:pointer;
+          cursor: pointer;
         }
         p {
           color: @text-color-primary;
@@ -85,7 +86,7 @@ body {
             font-weight: bold;
             font-size: 14px;
             color: @text-color-secondary;
-            &:nth-child(2){
+            &:nth-child(2) {
               margin-left: 5px;
             }
             &:hover {
@@ -108,7 +109,7 @@ body {
   .container {
     .title {
       h2 {
-        font-weight: bold;
+        font-family: @font-quatrro-sans;
         margin: 60px 0;
         text-transform: uppercase;
         padding: 0 10px;
@@ -153,7 +154,7 @@ body {
               display: flex;
               justify-content: center;
               align-items: center;
-              a{
+              a {
                 color: @text-color-secondary;
                 i {
                   font-size: 20px;
@@ -163,7 +164,7 @@ body {
                 }
               }
             }
-            h5{
+            h5 {
 
               color: @text-color-secondary;
             }
@@ -177,13 +178,13 @@ body {
   }
 }
 
-.work{
+.work {
   background-color: @back-color-primary;
-  .container{
+  .container {
     .title {
       padding: 60px 0 50px 0;
       h2 {
-        font-weight: bold;
+        font-family: @font-quatrro-sans;
         font-size: 36px;
         text-transform: uppercase;
         padding: 0 10px;
@@ -191,25 +192,25 @@ body {
         border-left: 5px solid @color-grey;
       }
     }
-    .row{
-      .our-work{
-        .card{
+    .row {
+      .our-work {
+        .card {
           border: none;
           border-radius: 0;
           margin: 15px 0;
           cursor: pointer;
-          &:hover{
-            .card-img-overlay{
+          &:hover {
+            .card-img-overlay {
               display: flex;
             }
           }
-          .card-img-overlay{
+          .card-img-overlay {
             display: none;
             justify-content: center;
             align-items: center;
             color: @text-color-secondary;
-            background-color: rgba(0,0,0, 0.3);
-            .card-title{
+            background-color: rgba(0, 0, 0, 0.3);
+            .card-title {
               background-color: @back-color-work;
               position: absolute;
               bottom: 0;
@@ -225,14 +226,14 @@ body {
         }
       }
     }
-    .button-show-me{
+    .button-show-me {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 60px 0;
       cursor: pointer;
-      .btn{
-        &:hover{
+      .btn {
+        &:hover {
           background-color: transparent;
           color: @text-color-secondary;
         }
@@ -246,7 +247,7 @@ body {
     .title {
       padding: 60px 0 50px 0;
       h2 {
-        font-weight: bold;
+        font-family: @font-quatrro-sans;
         font-size: 36px;
         text-transform: uppercase;
         padding: 0 10px;
@@ -259,15 +260,15 @@ body {
           text-align: center;
           border-radius: 0;
           border: none;
-          .card-body{
+          .card-body {
             margin-top: 15px;
-            .card-title{
+            .card-title {
               padding: 10px 0;
               text-transform: uppercase;
               font-weight: bold;
               font-size: 17px;
             }
-            p{
+            p {
               font-size: 13px;
               line-height: 23px;
               color: @text-color-primary;
@@ -276,14 +277,128 @@ body {
           }
         }
       }
-      .we-do-2{
+      .we-do-2 {
         margin-top: 50px;
       }
     }
   }
 }
 
+.stay {
+  margin-bottom: 50px;
+  .container {
+    .title {
+      padding: 60px 0 50px 0;
+      h2 {
+        font-family: @font-quatrro-sans;
+        font-weight: bold;
+        font-size: 36px;
+        text-transform: uppercase;
+        padding: 0 10px;
+        border-left: 5px solid @color-grey;
+      }
+    }
+  }
+  #map {
+    width: 100vw;
+    height: 350px;
+  }
+  .container {
+    .contact-information {
+      margin-top: 120px;
+      position: relative;
+      top: -120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      h3 {
+        padding: 30px 0 20px 0;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+      p {
+        color: @color-form;
+        span {
+          font-weight: 700;
+        }
+      }
+      p:nth-last-child(1) {
+        margin: 0;
+      }
+    }
+    .contact-form {
+      position: relative;
+      background-color: white;
+      top: -120px;
+      form {
+        padding: 30px 30px 0 30px;
+        .form-group {
+          label {
+            color: @color-form;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 26px;
+          }
+          input {
+            background-color: @back-color-form;
+          }
+          #MessageForm {
+            background-color: @back-color-form;
+            height: 150px;
+          }
+        }
+        .submit-form {
+          display: flex;
+          flex-wrap: wrap;
 
+          button {
+            background-color: @color-primary;
+            color: @text-color-secondary;
+            text-transform: uppercase;
+          }
+          span {
+            color: @color-form;
+            margin: 10px 20px;
+          }
+          .success {
+            color: @color-primary;
+            margin: 10px 20px;
+          }
+          .error {
+            color: red;
+            margin: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: @back-color-primary;
+  height: 90px;
+  .container {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-size: 14px;
+      color: @text-color-secondary;
+      margin: 0;
+    }
+    div {
+      a {
+        margin: 0 10px;
+        i {
+          font-size: 16px;
+          color: @text-color-secondary;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 992px) {
   nav {
@@ -294,16 +409,18 @@ body {
       }
     }
   }
+
   .team {
     .container {
       .row {
         justify-content: space-around;
-        .our-team{
+        .our-team {
           margin-top: 10px;
         }
       }
     }
   }
+
   .work {
     .container {
       .row {
@@ -316,7 +433,7 @@ body {
 @media screen and (max-width: 768px) {
 
   .banner {
-    img{
+    img {
       position: relative;
       object-fit: none;
       object-position: 60% 100%;
@@ -329,6 +446,7 @@ body {
       }
     }
   }
+
   .team {
     .container {
       .row {
@@ -336,6 +454,7 @@ body {
       }
     }
   }
+
   .work {
     .container {
       .row {
@@ -343,6 +462,7 @@ body {
       }
     }
   }
+
   .services {
     .container {
       .row {
@@ -352,22 +472,22 @@ body {
   }
 }
 
+@media screen and (max-width: 576px) {
 
-@media screen and (max-width: 576px){
-
-  .banner{
-    img{
+  .banner {
+    img {
       object-position: 40% 100%;
       height: 80vh;
     }
   }
 }
+
 @media screen and (max-width: 400px) {
 
   .team {
     .container {
       .our-team {
-        padding: 0!important;
+        padding: 0 !important;
       }
     }
   }

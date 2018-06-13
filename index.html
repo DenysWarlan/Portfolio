@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Quattrocento+Sans:400,700"
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Quattrocento+Sans:400,500,600,700"
           rel="stylesheet">
 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -49,10 +49,10 @@
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -317,14 +317,231 @@
 </section>
 
 
+<section  class="stay">
+    <div  id="features"class="container">
+        <div class="title">
+            <h2>stay in touch.</h2>
+        </div>
+    </div>
+    <div id="map">
+
+    </div>
+    <div id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-information col-lg-6 col-xl-6">
+                    <h3>contact information</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique nec dolor non,
+                        ornare sagittis dolor. Nulla vestibulum lacus sed molestie gravida.
+                    </p>
+                    <p>Cras fermentum elit quis magna congue, <span>vel sodales</span> arcu vestibulum. Nunc lobortis
+                        dui magna, quis dapibus lacus</p>
+                </div>
+                <div class="contact-form col-lg-6 col-xl-6">
+                    <form id="form" action="mail.php" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <label for="NameForm">Your Name</label>
+                                <input type="text"  class="form-control" required name="name" id="NameForm">
+                            </div>
+                            <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <label for="EmailForm">Your Email</label>
+                                <input type="text" class="form-control" required name="email" id="EmailForm">
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="MessageForm">Your Message</label>
+                                <textarea class="form-control" required name="mes" id="MessageForm"></textarea>
+                            </div>
+                        </div>
+                        <div class="submit-form">
+                            <button type="submit"  class="btn btn-form">Send Message</button>
+                            <span></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+          <p>© Copyright 2014 by PSD Booster. All Rights Reserved.</p>
+          <div class="social">
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-skype" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-behance-square" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      </div>
+    </div>
+</footer>
+
 <script
         src="https://code.jquery.com/jquery-2.0.3.js"
         integrity="sha256-lCf+LfUffUxr81+W0ZFpcU0LQyuZ3Bj0F2DQNCxTgSI="
         crossorigin="anonymous"></script>
-<!--<script src="js/ajax.js"></script>-->
+<script src="js/jquery.validate.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3LvZ5rKjWTUH9OUD8O5JjJ2RCiXD5rpg&callback=initMap"
+        async defer></script>
+<script>
+    function initMap() {
+        var styledMapType = new google.maps.StyledMapType(
+            [
+                {elementType: 'geometry', stylers: [{color: '#d4d6d2'}]},
+                {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
+                {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+                {
+                    featureType: 'administrative',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#d4d6d2'}]
+                },
+                {
+                    featureType: 'administrative.neighborhood',
+                    elementType: 'label.text',
+                    stylers: [{visibility: 'on'}]
+                },
+                {
+                    featureType: 'administrative.province',
+                    elementType: 'label.text',
+                    stylers: [{visibility: 'on'}]
+                },
+                {
+                    featureType: 'administrative.land_parcel',
+                    elementType: 'geometry.stroke',
+                    stylers: [
+                        {
+                            color: '#d4d6d2',
+                            visibility: 'on'
+                        }
+                    ]
+                },
+                {
+                    featureType: 'administrative.land_parcel',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#ae9e90'}]
+                },
+                {
+                    featureType: 'landscape',
+                    elementType: 'label.text',
+                    stylers: [{ visibility: 'on'}]
+                },
+                {
+                    featureType: 'landscape.natural',
+                    elementType: 'geometry',
+                    stylers: [{color: '#d4d6d2'}]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'geometry',
+                    stylers: [{color: '#d4d6d2'}]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text',
+                    stylers: [{visibility: 'on'}]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#93817c'}]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.icon',
+                    stylers: [{visibility: 'off'}]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'geometry.fill',
+                    stylers: [{color: '#a5b076'}]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#447530'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{color: '#f5f1e6'}]
+                },
+                {
+                    featureType: 'road.arterial',
+                    elementType: 'geometry',
+                    stylers: [{color: '#fdfcf8'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{color: '#f8c967'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#e9bc62'}]
+                },
+                {
+                    featureType: 'road.highway.controlled_access',
+                    elementType: 'geometry',
+                    stylers: [{color: '#e98d58'}]
+                },
+                {
+                    featureType: 'road.highway.controlled_access',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#db8555'}]
+                },
+                {
+                    featureType: 'road.local',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#806b63'}]
+                },
+                {
+                    featureType: 'transit.line',
+                    elementType: 'geometry',
+                    stylers: [{color: '#dfd2ae'}]
+                },
+                {
+                    featureType: 'transit.line',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#8f7d77'}]
+                },
+                {
+                    featureType: 'transit.line',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{color: '#ebe3cd'}]
+                },
+                {
+                    featureType: 'transit.station',
+                    elementType: 'geometry',
+                    stylers: [{color: '#dfd2ae'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'geometry.fill',
+                    stylers: [{color: '#b9d3c2'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#92998d'}]
+                }
+            ],
+            {name: 'Styled Map'});
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 23.03, lng: 72.5669967},
+            zoom: 12
+        });
+        map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+
+    }
+</script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 </body>
