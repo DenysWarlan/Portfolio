@@ -59,3 +59,11 @@ typings/
 
 # next.js build output
 .next
+
+        .idea/
+        PHPMailer/language/
+        composer.lock
+        composer.phar
+        package-lock.json
+        thank-you.html
+        vendor/
