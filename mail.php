@@ -14,13 +14,13 @@ $email = $_POST['email'];
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'denis.varla95@gmail.com';  // Your login from the mail from which letters will be sent
-$mail->Password = 'Den4ik21';   // Your password from the mail from which letters will be sent
+$mail->Username = 'denv42101@gmail.com';  // Your login from the mail from which letters will be sent
+$mail->Password = 'denvar5321';   // Your password from the mail from which letters will be sent
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
 
-$mail->setFrom('denis.varla95@gmail.com');  // who will send the letter
+$mail->setFrom('denv42101@gmail.com');  // who will send the letter
 $mail->addAddress('ciluka@taylorventuresllc.com'); // who will receive the letter
 $mail->isHTML(true);
 

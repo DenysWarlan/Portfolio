@@ -346,6 +346,8 @@ footer .container {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 footer .container p {
   font-size: 14px;
@@ -398,6 +400,17 @@ footer .container div a i {
   .services .container .row {
     -ms-flex-pack: center;
         justify-content: center;
+  }
+  footer {
+    background-color: #3a454d;
+    height: 90px;
+  }
+  footer .container {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
   }
 }
 @media screen and (max-width: 576px) {

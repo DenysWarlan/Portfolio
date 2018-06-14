@@ -383,6 +383,8 @@ footer {
     height: inherit;
     align-items: center;
     justify-content: space-between;
+
+    flex-wrap: wrap;
     p {
       font-size: 14px;
       color: @text-color-secondary;
@@ -468,6 +470,16 @@ footer {
       .row {
         justify-content: center;
       }
+    }
+  }
+
+  footer {
+    background-color: @back-color-primary;
+    height: 90px;
+    .container {
+    flex-direction: column-reverse;
+      justify-content: space-around;
+      text-align: center;
     }
   }
 }
