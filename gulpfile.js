@@ -22,7 +22,7 @@ gulp.task('css', function () {
             compress: false
         }))
         .pipe(autoprefixer({
-            browsers: ['last 3 versions', "IE 9"],
+            browsers: ['last 3 versions', "IE 9"]
         }))
         .pipe( gulp.dest('./css') )
         .pipe( browserSync.stream());
@@ -34,7 +34,7 @@ gulp.task('server', function() {
     browserSync.init({
         host: 'localhost',
         open: 'external',
-        proxy: 'http://localhost/MODEST/index.html',
+        proxy: 'http://localhost/MODEST/',
         port: '8086'
     });
 
